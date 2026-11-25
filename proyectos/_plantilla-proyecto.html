@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+  ================================================================
+  PLANTILLA DE PROYECTO
+  1. Duplica este archivo y renómbralo, ej: wireshark-lab.html (sin espacios ni tildes)
+  2. Crea la carpeta  assets/projects/wireshark-lab/  y mete ahí tus imágenes
+  3. Reemplaza todo lo que esté en MAYÚSCULAS / entre [corchetes]
+  4. En index.html, activa la tarjeta de proyecto que apunta a este archivo
+  Este archivo (_plantilla) no aparece en el sitio mientras nadie lo enlace.
+  ================================================================
+-->
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[TÍTULO DEL PROYECTO] — Brithany Serracín</title>
+  <meta name="description" content="[Descripción corta del proyecto]" />
+  <meta name="robots" content="noindex" /> <!-- BORRA esta línea en tu copia -->
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Share+Tech+Mono&family=Michroma&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="brand">BS<span class="cursor">_</span><span class="slash">/</span></a>
+    <div class="nav-actions">
+      <a class="btn" href="../index.html#projects">← <span lang="en">All projects</span><span lang="es">Proyectos</span></a>
+      <button class="lang-toggle" type="button"><b>EN</b> / ES</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="breadcrumb">~/projects/<span style="color:var(--cerulean-bright)">[nombre-proyecto]</span> $ cat README</div>
+
+  <!-- ENCABEZADO -->
+  <header class="panel project-hero reveal">
+    <div class="panel-head"><span>PROJECT_0X // CASE FILE</span><span class="win-ctrl">— ▢ ✕</span></div>
+    <div class="panel-body">
+      <span class="label">[Herramienta] · [Área]</span>
+      <h1>[Título del<br />proyecto]</h1>
+      <p class="lead" lang="en">[Overview in English: what you built and why.]</p>
+      <p class="lead" lang="es">[Resumen en español: qué hiciste y para qué.]</p>
+    </div>
+    <div class="meta-row" style="border-top:1px solid var(--line-strong)">
+      <div><span class="label"><span lang="en">Tool</span><span lang="es">Herramienta</span></span><div class="v">[Wireshark / Packet Tracer / …]</div></div>
+      <div><span class="label"><span lang="en">Scope</span><span lang="es">Alcance</span></span><div class="v">[Lab / Real / Académico]</div></div>
+      <div><span class="label"><span lang="en">Date</span><span lang="es">Fecha</span></span><div class="v">[2026]</div></div>
+    </div>
+  </header>
+
+  <!-- IMAGEN PRINCIPAL -->
+  <section class="content-block" style="padding:0">
+    <figure class="panel figure reveal">
+      <div class="panel-head"><span>overview.view</span><span class="win-ctrl">— ▢ ✕</span></div>
+      <img src="../assets/projects/[nombre-proyecto]/portada.jpg" alt="[Describe la imagen]" />
+      <figcaption>[Pie de foto]</figcaption>
+    </figure>
+  </section>
+
+  <!-- HERRAMIENTAS + OBJETIVOS -->
+  <section class="content-block two-col" style="padding:0">
+    <div class="panel reveal">
+      <div class="panel-head"><span>stack.conf</span><span class="win-ctrl">///</span></div>
+      <div class="panel-body">
+        <ul class="check-list">
+          <li>[Tecnología 1]</li>
+          <li>[Tecnología 2]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel reveal">
+      <div class="panel-head"><span>objectives.txt</span><span class="win-ctrl">///</span></div>
+      <div class="panel-body">
+        <ul class="check-list" lang="en"><li>[Objective 1]</li><li>[Objective 2]</li></ul>
+        <ul class="check-list" lang="es"><li>[Objetivo 1]</li><li>[Objetivo 2]</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TROUBLESHOOTING / HALLAZGOS — copia el <article> completo por cada caso -->
+  <section class="content-block" style="padding:0">
+    <h2 style="margin-top:40px">Troubleshooting Log</h2>
+    <article class="panel log reveal">
+      <div class="panel-head"><span>CASE_01 // [Tema]</span><span class="win-ctrl">— ▢ ✕</span></div>
+      <div class="col">
+        <div class="cell"><h4>Challenge</h4><p lang="en">[…]</p><p lang="es">[…]</p></div>
+        <div class="cell"><h4>Root cause</h4><p lang="en">[…]</p><p lang="es">[…]</p></div>
+        <!-- <div class="cell"><img src="../assets/projects/[nombre-proyecto]/captura.jpg" alt="" /></div> -->
+      </div>
+      <div class="col">
+        <div class="cell">
+          <h4>Solution implemented</h4>
+          <p lang="en">[…]</p><p lang="es">[…]</p>
+<pre class="cli"><span class="p">Router(config)#</span> [comando]</pre>
+        </div>
+        <div class="cell"><h4>Highlights</h4><p lang="en">[…]</p><p lang="es">[…]</p></div>
+      </div>
+    </article>
+  </section>
+
+  <div style="margin-top:40px; display:flex; gap:12px; flex-wrap:wrap">
+    <a class="btn" href="../index.html#projects">← <span lang="en">Back to projects</span><span lang="es">Volver a proyectos</span></a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap"><span>© <span data-year>2026</span> Brithany Serracín</span></div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

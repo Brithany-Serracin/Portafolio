@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enterprise Branch Network Architecture — Brithany Serracín</title>
+  <meta name="description" content="OSPF and EIGRP redistribution, VLAN segmentation, router-on-a-stick, HSRP redundancy and DHCP relay — designed and simulated in Cisco Packet Tracer." />
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Share+Tech+Mono&family=Michroma&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="brand">BS<span class="cursor">_</span><span class="slash">/</span></a>
+    <div class="nav-actions">
+      <a class="btn" href="../index.html#projects">← <span lang="en">All projects</span><span lang="es">Proyectos</span></a>
+      <button class="lang-toggle" type="button"><b>EN</b> / ES</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <div class="breadcrumb">~/projects/<span style="color:var(--cerulean-bright)">enterprise-network</span> $ cat README</div>
+
+  <!-- ============ ENCABEZADO ============ -->
+  <header class="panel project-hero reveal">
+    <div class="panel-head"><span>PROJECT_01 // CASE FILE</span><span class="win-ctrl">— ▢ ✕</span></div>
+    <div class="panel-body">
+      <span class="label">Cisco Packet Tracer · Routing & Switching</span>
+      <h1>Enterprise Branch<br />Network Architecture</h1>
+      <p class="lead" lang="en">Two LAN network topologies designed and simulated in Cisco Packet Tracer, each running a different dynamic routing protocol (IGP): <strong>OSPF</strong> and <strong>EIGRP</strong>. The project covers route redistribution between both domains, VLAN segmentation, subinterface configuration and <strong>HSRP</strong> gateway redundancy.</p>
+      <p class="lead" lang="es">Dos topologías de red LAN diseñadas y simuladas en Cisco Packet Tracer, cada una con un protocolo de enrutamiento dinámico (IGP) distinto: <strong>OSPF</strong> y <strong>EIGRP</strong>. El proyecto incluye redistribución de rutas entre ambos dominios, segmentación con VLANs, subinterfaces y redundancia de gateway con <strong>HSRP</strong>.</p>
+    </div>
+    <div class="meta-row" style="border-top:1px solid var(--line-strong)">
+      <div><span class="label"><span lang="en">Tool</span><span lang="es">Herramienta</span></span><div class="v">Cisco Packet Tracer</div></div>
+      <div><span class="label"><span lang="en">Devices</span><span lang="es">Equipos</span></span><div class="v">Cisco 2911 · 1941 · 2960-24TT · Server-PT</div></div>
+      <div><span class="label">IGPs</span><div class="v">OSPFv2 (area 0) · EIGRP AS 7</div></div>
+      <div><span class="label"><span lang="en">Status</span><span lang="es">Estado</span></span><div class="v"><i class="status-dot"></i><span lang="en">End-to-end reachability</span><span lang="es">Conectividad total</span></div></div>
+      <!-- EDITAR: si subes el .pkt a GitHub, descomenta y pon el link -->
+      <!-- <div><span class="label">Repo</span><div class="v"><a href="https://github.com/TU-USUARIO/REPO" target="_blank" rel="noopener">GitHub ↗</a></div></div> -->
+    </div>
+  </header>
+
+  <!-- ============ TOPOLOGÍA ============ -->
+  <section class="content-block" style="padding:0">
+    <figure class="panel figure reveal">
+      <div class="panel-head"><span lang="en">topology.view</span><span lang="es">topologia.view</span><span class="win-ctrl">— ▢ ✕</span></div>
+      <img src="../assets/projects/enterprise-network/topologia-direccionamiento.jpg" alt="Full topology with addressing: EIGRP domain (left, red) and OSPF area 0 (right, blue) joined by border router R4" />
+      <figcaption lang="en">Left: EIGRP 7 domain with HSRP pair (principal / backup). Right: OSPF 3 area 0 with DHCP server. R4 is the border router redistributing between both IGPs. Click to enlarge.</figcaption>
+      <figcaption lang="es">Izquierda: dominio EIGRP 7 con par HSRP (principal / backup). Derecha: OSPF 3 área 0 con servidor DHCP. R4 es el router frontera que redistribuye entre ambos IGPs. Clic para ampliar.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ STACK + OBJETIVOS ============ -->
+  <section class="content-block two-col" style="padding:0">
+    <div class="panel reveal">
+      <div class="panel-head"><span>protocols.conf</span><span class="win-ctrl">///</span></div>
+      <div class="panel-body">
+        <ul class="check-list">
+          <li>VLANs & 802.1Q Trunking</li>
+          <li><span lang="en">Inter-VLAN Routing (Router-on-a-Stick / Subinterfaces)</span><span lang="es">Enrutamiento Inter-VLAN (Router-on-a-Stick / Subinterfaces)</span></li>
+          <li><span lang="en">Dynamic Routing (OSPFv2 & EIGRP)</span><span lang="es">Enrutamiento dinámico (OSPFv2 y EIGRP)</span></li>
+          <li><span lang="en">Route redistribution between IGPs</span><span lang="es">Redistribución de rutas entre IGPs</span></li>
+          <li><span lang="en">HSRP v2 default-gateway redundancy</span><span lang="es">Redundancia de gateway con HSRP v2</span></li>
+          <li><span lang="en">DHCP with relay (ip helper-address)</span><span lang="es">DHCP con relay (ip helper-address)</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel reveal">
+      <div class="panel-head"><span lang="en">objectives.txt</span><span lang="es">objetivos.txt</span><span class="win-ctrl">///</span></div>
+      <div class="panel-body">
+        <ul class="check-list" lang="en">
+          <li>Segment internal traffic into dedicated VLANs.</li>
+          <li>Implement subinterfaces on the core router to enable communication between VLANs.</li>
+          <li>Configure dynamic routing across WAN links for automatic path updates.</li>
+          <li>Set up redistribution between two distinct IGPs.</li>
+          <li>Verify end-to-end connectivity across all network segments.</li>
+        </ul>
+        <ul class="check-list" lang="es">
+          <li>Segmentar el tráfico interno en VLANs dedicadas.</li>
+          <li>Implementar subinterfaces en el router core para comunicar las VLANs.</li>
+          <li>Configurar enrutamiento dinámico en los enlaces WAN para actualizar rutas automáticamente.</li>
+          <li>Configurar redistribución entre dos IGPs distintos.</li>
+          <li>Verificar conectividad extremo a extremo en todos los segmentos.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TROUBLESHOOTING LOG ============ -->
+  <section class="content-block" style="padding:0">
+    <h2 style="margin-top:40px">Troubleshooting Log</h2>
+
+    <!-- CASO 01 -->
+    <article class="panel log reveal">
+      <div class="panel-head"><span>CASE_01 // <span lang="en">IGP redistribution</span><span lang="es">Redistribución entre IGPs</span></span><span class="win-ctrl">— ▢ ✕</span></div>
+      <div class="col">
+        <div class="cell">
+          <h4>Challenge</h4>
+          <p lang="en">Hosts in the EIGRP segment could not communicate with hosts in the OSPF segment.</p>
+          <p lang="es">Los hosts del segmento EIGRP no podían comunicarse con los del segmento OSPF.</p>
+        </div>
+        <div class="cell"><img src="../assets/projects/enterprise-network/troubleshooting-redistribucion.png" alt="Failed ping between segments before redistribution" /></div>
+        <div class="cell">
+          <h4>Root cause</h4>
+          <p lang="en">The border router running both EIGRP and OSPF (R4) did not have redistribution enabled, so neither domain learned the other's routes.</p>
+          <p lang="es">El router frontera con EIGRP y OSPF (R4) no tenía la redistribución habilitada, así que ningún dominio aprendía las rutas del otro.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="cell">
+          <h4>Solution implemented</h4>
+          <p lang="en">Mutual redistribution configured on R4:</p>
+          <p lang="es">Redistribución mutua configurada en R4:</p>
+<pre class="cli"><span class="p">R4(config)#</span> router eigrp 7
+<span class="p">R4(config-router)#</span> redistribute ospf 3 metric 10000 100 255 1 1500
+<span class="p">R4(config)#</span> router ospf 3
+<span class="p">R4(config-router)#</span> redistribute eigrp 7 subnets</pre>
+        </div>
+        <div class="cell"><img src="../assets/projects/enterprise-network/r4-redistribute-config.jpg" alt="R4 running-config showing redistribution" /></div>
+        <div class="cell">
+          <h4>Highlights</h4>
+          <p lang="en">EIGRP requires an explicit seed metric (bandwidth, delay, reliability, load, MTU) for redistributed routes. Specifying a metric when redistributing into OSPF is optional, since OSPF assigns a default cost of 20 to external routes. After the change, hosts in both domains ping each other successfully.</p>
+          <p lang="es">EIGRP necesita una métrica semilla explícita (ancho de banda, retardo, confiabilidad, carga, MTU) para las rutas redistribuidas. Al redistribuir hacia OSPF la métrica es opcional, porque OSPF asigna un costo por defecto de 20 a las rutas externas. Tras el cambio, los hosts de ambos dominios se hacen ping con éxito.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- CASO 02 -->
+    <article class="panel log reveal">
+      <div class="panel-head"><span>CASE_02 // <span lang="en">Gateway redundancy</span><span lang="es">Redundancia de gateway</span></span><span class="win-ctrl">— ▢ ✕</span></div>
+      <div class="col">
+        <div class="cell">
+          <h4>Challenge</h4>
+          <p lang="en">Create routing redundancy for the VLAN default gateways.</p>
+          <p lang="es">Crear redundancia de enrutamiento para los gateways de las VLANs.</p>
+        </div>
+        <div class="cell">
+          <h4>Root cause</h4>
+          <p lang="en">With a single gateway router, if it goes down every host in VLAN 3 and VLAN 5 loses communication with the rest of the network.</p>
+          <p lang="es">Con un solo router como gateway, si este cae todos los hosts de la VLAN 3 y VLAN 5 pierden comunicación con el resto de la red.</p>
+        </div>
+        <div class="cell"><img src="../assets/projects/enterprise-network/hsrp-vlans.png" alt="HSRP pair: principal and backup routers with virtual gateways for VLAN 3 and VLAN 5" /></div>
+      </div>
+      <div class="col">
+        <div class="cell">
+          <h4>Solution implemented</h4>
+          <p lang="en">HSRP v2 creates a virtual router per subinterface. The principal router (R0) gets priority 150 + preempt; the backup (R1) takes over automatically if R0 fails.</p>
+          <p lang="es">HSRP v2 crea un router virtual por subinterfaz. El router principal (R0) tiene prioridad 150 + preempt; el de respaldo (R1) toma el control automáticamente si R0 falla.</p>
+          <div class="cli-grid">
+<pre class="cli"><span class="c">! VLAN 3 — 192.168.50.64/26</span>
+<span class="p">R0(config)#</span> interface g0/1.3
+ encapsulation dot1Q 3
+ ip address 192.168.50.65 255.255.255.192
+ standby version 2
+ standby 3 ip 192.168.50.126
+ standby 3 priority 150
+ standby 3 preempt</pre>
+<pre class="cli"><span class="c">! VLAN 5 — 192.168.50.128/26</span>
+<span class="p">R0(config)#</span> interface g0/1.5
+ encapsulation dot1Q 5
+ ip address 192.168.50.129 255.255.255.192
+ standby version 2
+ standby 5 ip 192.168.50.190
+ standby 5 priority 150
+ standby 5 preempt</pre>
+          </div>
+        </div>
+        <div class="cell">
+          <h4>Highlights</h4>
+          <p lang="en">Because the network uses VLAN 3 and VLAN 5, HSRP must be applied on each subinterface. A topology with more VLANs would need one subinterface (and one HSRP group) per VLAN, so every VLAN keeps a redundant path to remote networks.</p>
+          <p lang="es">Como la red usa la VLAN 3 y la VLAN 5, HSRP se aplica en cada subinterfaz. Una topología con más VLANs necesitaría una subinterfaz (y un grupo HSRP) por VLAN, para que cada VLAN mantenga un camino redundante hacia redes remotas.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- CASO 03 -->
+    <article class="panel log reveal">
+      <div class="panel-head"><span>CASE_03 // DHCP relay</span><span class="win-ctrl">— ▢ ✕</span></div>
+      <div class="col">
+        <div class="cell">
+          <h4>Challenge</h4>
+          <p lang="en">Hosts in networks 10.100.0.0/24 and 10.200.0.0/24 were unable to obtain IP addresses from the DHCP server.</p>
+          <p lang="es">Los hosts de las redes 10.100.0.0/24 y 10.200.0.0/24 no obtenían dirección IP del servidor DHCP.</p>
+        </div>
+        <div class="cell">
+          <h4>Root cause</h4>
+          <p lang="en">The DHCP server sits on a different network segment, and routers do not forward broadcast DHCP requests across their boundaries.</p>
+          <p lang="es">El servidor DHCP está en otro segmento de red, y los routers no reenvían las solicitudes DHCP broadcast fuera de su segmento.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="cell">
+          <h4>Solution implemented</h4>
+          <p lang="en">Configured <code>ip helper-address</code> on the default-gateway interfaces of both LANs (Gi0/0 and Gi0/2 on R6) to relay DHCP broadcasts as unicast to the central server.</p>
+          <p lang="es">Se configuró <code>ip helper-address</code> en las interfaces gateway de ambas LANs (Gi0/0 y Gi0/2 en R6) para reenviar los broadcasts DHCP como unicast al servidor central.</p>
+<pre class="cli"><span class="p">R6(config)#</span> interface GigabitEthernet0/0
+<span class="p">R6(config-if)#</span> ip helper-address 172.18.0.3
+<span class="p">R6(config)#</span> interface GigabitEthernet0/2
+<span class="p">R6(config-if)#</span> ip address 10.200.0.1 255.255.255.0
+<span class="p">R6(config-if)#</span> ip helper-address 172.18.0.3</pre>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ GALERÍA ============ -->
+  <section class="content-block" style="padding:0">
+    <h2 style="margin-top:40px"><span lang="en">Running configs</span><span lang="es">Configuraciones</span></h2>
+    <!-- EDITAR: para agregar más capturas, guarda la imagen en assets/projects/enterprise-network/ y copia un <figure> -->
+    <div class="gallery">
+      <figure class="panel figure reveal"><img src="../assets/projects/enterprise-network/cli-r0.jpg" alt="R0 running-config: HSRP principal" loading="lazy" /><figcaption>R0 — HSRP principal (priority 150)</figcaption></figure>
+      <figure class="panel figure reveal"><img src="../assets/projects/enterprise-network/cli-r1.jpg" alt="R1 running-config: HSRP backup" loading="lazy" /><figcaption>R1 — HSRP backup</figcaption></figure>
+      <figure class="panel figure reveal"><img src="../assets/projects/enterprise-network/cli-r6.jpg" alt="R6 running-config: OSPF and DHCP relay" loading="lazy" /><figcaption>R6 — OSPF 3 + ip helper-address</figcaption></figure>
+      <figure class="panel figure reveal"><img src="../assets/projects/enterprise-network/r4-frontera.jpg" alt="R4 border router between EIGRP and OSPF domains" loading="lazy" /><figcaption lang="en">R4 — border router (EIGRP ⇄ OSPF)</figcaption><figcaption lang="es">R4 — router frontera (EIGRP ⇄ OSPF)</figcaption></figure>
+      <figure class="panel figure reveal"><img src="../assets/projects/enterprise-network/topologia-general.png" alt="Topology overview" loading="lazy" /><figcaption lang="en">Topology overview</figcaption><figcaption lang="es">Vista general de la topología</figcaption></figure>
+    </div>
+  </section>
+
+  <div style="margin-top:40px; display:flex; gap:12px; flex-wrap:wrap">
+    <a class="btn" href="../index.html#projects">← <span lang="en">Back to projects</span><span lang="es">Volver a proyectos</span></a>
+    <a class="btn solid" href="../index.html#contact"><span lang="en">Contact me</span><span lang="es">Contáctame</span> →</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Brithany Serracín</span>
+    <span>CASE_01 // <span style="color:var(--ok)">RESOLVED</span></span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Archivos que NO se publican en la web
+*.docx.pdf
+github network project_portafolio.pdf
+_originales/
+README.md
+GUIA*.pdf

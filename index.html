@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<!--
+  =====================================================================
+  PORTAFOLIO — BRITHANY SERRACÍN
+  ---------------------------------------------------------------------
+  CÓMO EDITAR (resumen, la guía completa está en README.md):
+   • Busca "EDITAR" (Ctrl+F) para ver todos los lugares que debes llenar.
+   • Cada texto existe 2 veces: <span lang="en">…</span> y <span lang="es">…</span>.
+     Si cambias uno, cambia también el otro.
+   • Tu foto: guárdala como  assets/img/foto-perfil.jpg  (y listo).
+  =====================================================================
+-->
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brithany Serracín — Network Technician & Cybersecurity</title>
+  <meta name="description" content="Portfolio of Brithany Serracín — Network Technician, CCST Cybersecurity certified. Network design, troubleshooting and security projects." />
+
+  <!-- Vista previa al compartir el link (LinkedIn, WhatsApp…)
+       EDITAR: cuando tengas el dominio de Vercel, cambia la URL y crea assets/img/og-image.jpg (1200x630) -->
+  <meta property="og:title" content="Brithany Serracín — Network Technician & Cybersecurity" />
+  <meta property="og:description" content="Network design, troubleshooting and security projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/og-image.jpg" />
+  <!-- <meta property="og:url" content="https://TU-PROYECTO.vercel.app/" /> -->
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Share+Tech+Mono&family=Michroma&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ============================ NAVEGACIÓN ============================ -->
+<nav class="nav">
+  <div class="wrap">
+    <a href="#top" class="brand">BS<span class="cursor">_</span><span class="slash">/</span></a>
+    <ul>
+      <li><a href="#about"><span lang="en">About</span><span lang="es">Perfil</span></a></li>
+      <li><a href="#skills"><span lang="en">Skills</span><span lang="es">Habilidades</span></a></li>
+      <li><a href="#projects"><span lang="en">Projects</span><span lang="es">Proyectos</span></a></li>
+      <li><a href="#experience"><span lang="en">Experience</span><span lang="es">Experiencia</span></a></li>
+      <li><a href="#certs"><span lang="en">Certifications</span><span lang="es">Certificaciones</span></a></li>
+      <li><a href="#contact"><span lang="en">Contact</span><span lang="es">Contacto</span></a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="lang-toggle" type="button"><b>EN</b> / ES</button>
+      <a class="btn" data-cv data-cv-base="assets/cv/" href="assets/cv/CV_Brithany_Serracin_EN.pdf" download>CV ↓</a>
+      <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ============================ HERO / FICHA ============================ -->
+<section class="hero">
+  <div class="hero-deco" aria-hidden="true"><span class="arc l"></span><span class="arc r"></span><span class="floor"></span></div>
+  <div class="wrap">
+    <div class="hud-glow reveal">
+    <div class="hud-frame"><div class="hud-inner">
+      <div class="hud-head"><span>PROFILE // BS-2026</span><span class="hatch"></span><span class="win-ctrl">— ▢ ✕</span></div>
+
+      <div class="hud-grid">
+        <!-- ===== Columna izquierda: foto + huella + chip ===== -->
+        <aside class="hud-left">
+          <!-- FOTO ----------------------------------------------------------
+               EDITAR: guarda tu foto como assets/img/foto-perfil.jpg
+               Recomendado: foto de frente u hombros, fondo liso y oscuro,
+               bien iluminada (min. 900x900 px). En la web publicada se
+               convierte automáticamente en un retrato de partículas cian. -->
+          <div class="photo-slot corners">
+            <span class="c1"></span><span class="c2"></span>
+            <img src="assets/img/foto-perfil.jpg" alt="Brithany Serracín" />
+            <canvas id="portrait" aria-hidden="true"></canvas>
+            <span class="scan" aria-hidden="true"></span>
+            <div class="placeholder"><strong>[ PHOTO ]</strong>assets/img/foto-perfil.jpg</div>
+          </div>
+          <div class="bio-row">
+            <div class="cut finger"><svg viewBox="0 0 60 72" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" style="color:var(--cerulean)"><ellipse cx="30" cy="38" rx="5.4" ry="7.0" stroke-dasharray="28 3 35 4" transform="rotate(-7 30 38)"/><ellipse cx="30" cy="38" rx="8.3" ry="10.5" stroke-dasharray="12 2 33 4" transform="rotate(-7 30 38)"/><ellipse cx="30" cy="38" rx="11.2" ry="14.0" stroke-dasharray="40 3 12 2" transform="rotate(5 30 38)"/><ellipse cx="30" cy="38" rx="14.1" ry="17.5" stroke-dasharray="34 2 25 2" transform="rotate(5 30 38)"/><ellipse cx="30" cy="38" rx="17.0" ry="21.0" stroke-dasharray="11 2 24 4" transform="rotate(-7 30 38)"/><ellipse cx="30" cy="38" rx="19.9" ry="24.5" stroke-dasharray="33 2 24 2" transform="rotate(-4 30 38)"/><ellipse cx="30" cy="38" rx="22.8" ry="28.0" stroke-dasharray="26 5 19 4" transform="rotate(-5 30 38)"/><ellipse cx="30" cy="38" rx="25.7" ry="31.5" stroke-dasharray="27 3 16 4" transform="rotate(-2 30 38)"/><ellipse cx="30" cy="38" rx="28.6" ry="35.0" stroke-dasharray="31 2 45 4" transform="rotate(-6 30 38)"/></svg></div>
+            <div class="id-box"><span>ID: BS-CR-01</span><div class="barcode"><i></i></div></div>
+          </div>
+          <div class="cut chip"><svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true" style="color:var(--cerulean)"><g opacity="0.75"><path d="M118 53 H89 L71 35 H11"/><circle cx="8.5" cy="35" r="2.2"/><path d="M118 60 H94 L82 48 H21"/><circle cx="18.5" cy="48" r="2.2"/><path d="M118 67 H99 L93 61 H39"/><circle cx="36.5" cy="61" r="2.2"/><path d="M118 74 H104 L104 74 H35"/><circle cx="32.5" cy="74" r="2.2"/><path d="M118 81 H99 L93 87 H28"/><circle cx="25.5" cy="87" r="2.2"/><path d="M118 88 H94 L82 100 H37"/><circle cx="34.5" cy="100" r="2.2"/><path d="M118 95 H89 L71 113 H37"/><circle cx="34.5" cy="113" r="2.2"/><path d="M182 53 H211 L229 35 H269"/><circle cx="271.5" cy="35" r="2.2"/><path d="M182 60 H206 L218 48 H273"/><circle cx="275.5" cy="48" r="2.2"/><path d="M182 67 H201 L207 61 H277"/><circle cx="279.5" cy="61" r="2.2"/><path d="M182 74 H196 L196 74 H281"/><circle cx="283.5" cy="74" r="2.2"/><path d="M182 81 H201 L207 87 H277"/><circle cx="279.5" cy="87" r="2.2"/><path d="M182 88 H206 L218 100 H287"/><circle cx="289.5" cy="100" r="2.2"/><path d="M182 95 H211 L229 113 H273"/><circle cx="275.5" cy="113" r="2.2"/><path d="M128 43 V29 L107 18.5 V12"/><path d="M135 43 V31 L121 24.0 V11"/><path d="M142 43 V33 L135 29.5 V9"/><path d="M149 43 V35 L149 35.0 V11"/><path d="M156 43 V33 L163 29.5 V8"/><path d="M163 43 V31 L177 24.0 V13"/><path d="M170 43 V29 L191 18.5 V5"/><path d="M128 107 V121 L107 131.5 V145"/><path d="M135 107 V119 L121 126.0 V138"/><path d="M142 107 V117 L135 120.5 V140"/><path d="M149 107 V115 L149 115.0 V144"/><path d="M156 107 V117 L163 120.5 V141"/><path d="M163 107 V119 L177 126.0 V144"/><path d="M170 107 V121 L191 131.5 V139"/><path d="M118 53 H122M178 53 H182"/><path d="M118 60 H122M178 60 H182"/><path d="M118 67 H122M178 67 H182"/><path d="M118 74 H122M178 74 H182"/><path d="M118 81 H122M178 81 H182"/><path d="M118 88 H122M178 88 H182"/><path d="M118 95 H122M178 95 H182"/><path d="M128 43 V47M128 103 V107"/><path d="M135 43 V47M135 103 V107"/><path d="M142 43 V47M142 103 V107"/><path d="M149 43 V47M149 103 V107"/><path d="M156 43 V47M156 103 V107"/><path d="M163 43 V47M163 103 V107"/><path d="M170 43 V47M170 103 V107"/></g><rect x="122" y="47" width="56" height="56" rx="3" stroke-width="2" fill="#04101e" style="filter:drop-shadow(0 0 6px #3fd8f2)"/><rect x="128" y="53" width="44" height="44" rx="2" stroke-width="1" opacity=".6"/><path d="M143.0 73.0 v-5 a7 7 0 0 1 14 0 v5" stroke="#e4f2ff" stroke-width="2.4"/><rect x="140.0" y="73.0" width="20" height="15" rx="2" fill="#e4f2ff" stroke="none"/><circle cx="150.0" cy="79.0" r="2.2" fill="#04101e" stroke="none"/><rect x="149.0" y="80.0" width="2" height="4" fill="#04101e" stroke="none"/></svg></div>
+        </aside>
+
+        <!-- ===== Columna derecha ===== -->
+        <div class="hud-main">
+          <div class="hud-top">
+            <div class="headline-text">
+              <span class="label">// Network Engineering · Cybersecurity</span>
+              <h1 class="hero-name">Brithany<span class="accent">Serracín<span class="cursor">_</span></span></h1>
+              <p class="hero-tagline">
+                <span lang="en">I design, secure and troubleshoot networks — from VLAN segmentation and dynamic routing to log analysis and incident response.</span>
+                <span lang="es">Diseño, aseguro y diagnostico redes — desde segmentación con VLANs y enrutamiento dinámico hasta análisis de logs y respuesta a incidentes.</span>
+              </p>
+            </div>
+            <div class="globe-wrap">
+              <span class="bk tl"></span><span class="bk br"></span>
+              <canvas id="globe" aria-hidden="true"></canvas>
+            </div>
+            <div class="cut side-list">
+              <span class="tt">///</span>
+              <span lang="en">Networks</span><span lang="es">Redes</span>
+              <span lang="en">Security</span><span lang="es">Seguridad</span>
+              <span lang="en">Analysis</span><span lang="es">Análisis</span>
+              <span lang="en">Response</span><span lang="es">Respuesta</span>
+              <span lang="en">Monitoring</span><span lang="es">Monitoreo</span>
+              <svg viewBox="0 0 140 50" fill="none" aria-hidden="true"><path d="M0 49H140" stroke="rgba(63,216,242,.35)"/><polyline points="0,34.0 4,28.2 8,25.5 12,26.8 16,30.3 20,33.2 24,33.8 28,32.9 32,32.7 36,35.1 40,39.3 44,42.8 48,42.8 52,38.7 56,32.6 60,27.8 64,26.6 68,28.7 72,31.5 76,32.7 80,31.9 84,30.9 88,28.4 92,28.3 96,31.2 100,34.3 104,35.5 108,34.8 112,31.6 116,28.2 120,28.4 124,30.5 128,32.0 132,31.5 136,29.8 140,29.5" stroke="#3fd8f2" stroke-width="1.4" style="filter:drop-shadow(0 0 3px #3fd8f2)"/><polyline points="0,40.0 4,34.2 8,31.5 12,32.8 16,36.3 20,39.2 24,39.8 28,38.9 32,38.7 36,41.1 40,45.3 44,48.8 48,48.8 52,44.7 56,38.6 60,33.8 64,32.6 68,34.7 72,37.5 76,38.7 80,37.9 84,36.9 88,34.4 92,34.3 96,37.2 100,40.3 104,41.5 108,40.8 112,37.6 116,34.2 120,34.4 124,36.5 128,38.0 132,37.5 136,35.8 140,35.5" stroke="rgba(63,216,242,.35)" stroke-width="1"/></svg>
+            </div>
+          </div>
+
+          <!-- EDITAR: datos rápidos de la ficha -->
+          <ul class="fields">
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h6M7 14h9"/></svg></span><span class="k">// <span lang="en">Role_</span><span lang="es">Rol_</span></span><span class="v"><span lang="en">Network Technician</span><span lang="es">Técnica en Redes</span></span></li>
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 6l-4 12"/></svg></span><span class="k">// <span lang="en">Focus_</span><span lang="es">Enfoque_</span></span><span class="v"><span lang="en">Cybersecurity Analyst</span><span lang="es">Analista de Ciberseguridad</span></span></li>
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="k">// <span lang="en">Certified_</span><span lang="es">Certificada_</span></span><span class="v">CCST Cybersecurity</span></li>
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-6.2-6-11a6 6 0 1 1 12 0c0 4.8-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg></span><span class="k">// <span lang="en">Location_</span><span lang="es">Ubicación_</span></span><span class="v">Costa Rica</span></li>
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h9M7.5 4v2M5 6c.5 3 2.5 5.5 6 7M10 6c-.7 3.3-2.7 6-6 7.5"/><path d="M13 20l4-9 4 9M14.4 17h5.2"/></svg></span><span class="k">// <span lang="en">Languages_</span><span lang="es">Idiomas_</span></span><span class="v"><span lang="en">Spanish · English B2+</span><span lang="es">Español · Inglés B2+</span></span></li>
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h4l3-6 4 12 3-8 2 2h4"/></svg></span><span class="k">// <span lang="en">Status_</span><span lang="es">Status_</span></span><span class="v"><span class="status-pill"><i class="status-dot"></i><span lang="en">Open to work</span><span lang="es">Disponible</span></span></span></li>
+          </ul>
+
+          <div class="hero-cta">
+            <a class="btn solid" href="#projects"><span lang="en">View projects</span><span lang="es">Ver proyectos</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn" data-cv data-cv-base="assets/cv/" href="assets/cv/CV_Brithany_Serracin_EN.pdf" download><span lang="en">Download CV</span><span lang="es">Descargar CV</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></a>
+            <a class="btn" href="#contact"><span lang="en">Contact</span><span lang="es">Contacto</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg></a>
+            <span class="hatch" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </div></div>
+    </div>
+
+    <!-- Barra de métricas — EDITAR: actualiza los números cuando sumes proyectos o certificaciones -->
+    <div class="hero-stats reveal">
+      <div class="cut wave-box"><canvas id="bars" aria-hidden="true"></canvas></div>
+      <div class="cut stat"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="9" r="4"/><circle cx="9" cy="37" r="4"/><circle cx="39" cy="37" r="4"/><path d="M22 12.5L11 33.5M26 12.5l11 21M13 37h22"/></svg><div><b>03</b><span lang="en">Resolved cases</span><span lang="es">Casos resueltos</span><small>HSRP · DHCP · REDISTRIBUTION</small></div></div>
+      <div class="cut stat"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 5l15 6v11c0 9.5-6.5 16-15 20-8.5-4-15-10.5-15-20V11z"/><path d="M17 24l5 5 9-10"/></svg><div><b>08</b><span lang="en">Certifications</span><span lang="es">Certificaciones</span><small>CCST · CCNA · AWS</small></div></div>
+      <div class="cut stat"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 14L6 24l10 10M32 14l10 10-10 10M28 8l-8 32"/></svg><div><b>06</b><span lang="en">Protocols</span><span lang="es">Protocolos</span><small>OSPF · EIGRP · HSRP · 802.1Q</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 01 · ABOUT ============================ -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-title"><span class="idx">01</span><h2><span lang="en">About</span><span lang="es">Perfil</span></h2><span class="rule"></span></div>
+    <div class="about-grid">
+      <div class="panel reveal">
+        <div class="panel-head"><span>whoami</span><span class="win-ctrl">— ▢ ✕</span></div>
+        <div class="panel-body">
+          <!-- EDITAR: tu presentación. Puedes agregar más párrafos <p>. -->
+          <p lang="en">Network Technician specializing in Technical Support and <strong>CCST Cybersecurity</strong> certified, with solid expertise in infrastructure troubleshooting and problem resolution. Focused on proactive monitoring, network segmentation, and implementing security controls to ensure system stability and high availability.</p>
+          <p lang="es">Técnica en Redes especializada en Soporte Técnico y certificada en <strong>CCST Cybersecurity</strong>, con sólido conocimiento en diagnóstico y resolución de problemas de infraestructura. Orientada al monitoreo preventivo, la segmentación de redes y la implementación de controles de seguridad para garantizar la disponibilidad y estabilidad del sistema.</p>
+          <p lang="en">Passionate about event analysis and analytical incident resolution. My background in audiovisual post-production and customer service gives me attention to detail and clear communication under pressure.</p>
+          <p lang="es">Apasionada por el análisis de eventos y la resolución analítica de incidentes. Mi formación en postproducción audiovisual y atención al cliente me aporta atención al detalle y comunicación clara bajo presión.</p>
+        </div>
+      </div>
+      <div class="panel reveal">
+        <div class="panel-head"><span>sys.stats</span><span class="win-ctrl">///</span></div>
+        <div class="panel-body">
+          <!-- EDITAR: estos números salen del CV; actualízalos cuando cambien -->
+          <ul class="stat-list">
+            <li><span lang="en">Certifications & courses</span><span lang="es">Certificaciones y cursos</span><b>08</b></li>
+            <li><span lang="en">Network projects</span><span lang="es">Proyectos de redes</span><b>01</b></li>
+            <li><span lang="en">Routing protocols</span><span lang="es">Protocolos de enrutamiento</span><b>OSPF · EIGRP</b></li>
+            <li><span lang="en">Current track</span><span lang="es">Ruta actual</span><b>CCNA</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 02 · SKILLS ============================ -->
+<section id="skills">
+  <div class="wrap">
+    <div class="section-title"><span class="idx">02</span><h2><span lang="en">Skills</span><span lang="es">Habilidades</span></h2><span class="rule"></span></div>
+    <!-- EDITAR: para agregar una habilidad, copia un bloque <article class="panel skill-card …">…</article> -->
+    <div class="skills-grid">
+      <article class="panel skill-card reveal"><div class="panel-body">
+        <h3>&gt; <span lang="en">Network Infrastructure</span><span lang="es">Infraestructura de Red</span></h3>
+        <p lang="en">Configuration of switches, routers and LAN devices; VLANs, trunking and inter-VLAN routing.</p>
+        <p lang="es">Configuración de switches, routers y dispositivos LAN; VLANs, trunking y enrutamiento inter-VLAN.</p>
+        <div class="tags"><span class="tag">VLAN</span><span class="tag">802.1Q</span><span class="tag">OSPF</span><span class="tag">EIGRP</span><span class="tag">HSRP</span><span class="tag">DHCP</span></div>
+      </div></article>
+
+      <article class="panel skill-card reveal"><div class="panel-body">
+        <h3>&gt; <span lang="en">Network Analysis & Security</span><span lang="es">Análisis y Seguridad de Red</span></h3>
+        <p lang="en">System monitoring, log file analysis and packet inspection.</p>
+        <p lang="es">Monitoreo de sistemas, análisis de logs e inspección de tráfico.</p>
+        <div class="tags"><span class="tag">Wireshark</span><span class="tag">Logs</span><span class="tag">Endpoint Security</span></div>
+      </div></article>
+
+      <article class="panel skill-card reveal"><div class="panel-body">
+        <h3>&gt; <span lang="en">Incident Response</span><span lang="es">Respuesta a Incidentes</span></h3>
+        <p lang="en">Incident response lifecycle: detection, analysis, containment and escalation of threats.</p>
+        <p lang="es">Ciclo de vida de respuesta a incidentes: detección, análisis, contención y escalación de amenazas.</p>
+        <div class="tags"><span class="tag">CCST</span><span class="tag">Threat Detection</span></div>
+      </div></article>
+
+      <article class="panel skill-card reveal"><div class="panel-body">
+        <h3>&gt; <span lang="en">Networking Fundamentals</span><span lang="es">Fundamentos de Redes</span></h3>
+        <p lang="en">OSI and TCP/IP models, secure and insecure communication protocols.</p>
+        <p lang="es">Modelos OSI y TCP/IP, protocolos de comunicación seguros e inseguros.</p>
+        <div class="tags"><span class="tag">OSI</span><span class="tag">TCP/IP</span><span class="tag">Subnetting</span></div>
+      </div></article>
+
+      <article class="panel skill-card reveal"><div class="panel-body">
+        <h3>&gt; <span lang="en">Technical Support</span><span lang="es">Soporte Técnico</span></h3>
+        <p lang="en">PC hardware diagnostics, maintenance and repair; Windows and Linux installation and support.</p>
+        <p lang="es">Diagnóstico, mantenimiento y reparación de hardware; instalación y soporte de Windows y Linux.</p>
+        <div class="tags"><span class="tag">Windows</span><span class="tag">Linux</span><span class="tag">Hardware</span></div>
+      </div></article>
+
+      <article class="panel skill-card reveal"><div class="panel-body">
+        <h3>&gt; Cloud · Code · Data</h3>
+        <p lang="en">AWS cloud fundamentals, basic Python scripting, Power BI dashboards and intermediate Excel.</p>
+        <p lang="es">Fundamentos de nube con AWS, scripting básico en Python, dashboards en Power BI y Excel intermedio.</p>
+        <div class="tags"><span class="tag">AWS</span><span class="tag">Python</span><span class="tag">Power BI</span><span class="tag">Excel</span></div>
+      </div></article>
+
+      <article class="panel skill-card reveal"><div class="panel-body">
+        <h3>&gt; <span lang="en">Tools</span><span lang="es">Herramientas</span></h3>
+        <!-- EDITAR: agrega o quita herramientas que uses -->
+        <div class="tags"><span class="tag">Cisco Packet Tracer</span><span class="tag">Cisco IOS CLI</span><span class="tag">Wireshark</span><span class="tag">Git / GitHub</span></div>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 03 · PROJECTS ============================ -->
+<section id="projects">
+  <div class="wrap">
+    <div class="section-title"><span class="idx">03</span><h2><span lang="en">Projects</span><span lang="es">Proyectos</span></h2><span class="rule"></span></div>
+
+    <div class="projects-grid">
+      <!-- PROYECTO 01 -->
+      <a class="panel project-card reveal" href="proyectos/enterprise-network.html">
+        <div class="panel-head"><span>PROJECT_01</span><span class="win-ctrl">— ▢ ✕</span></div>
+        <div class="thumb"><img src="assets/projects/enterprise-network/topologia-general.png" alt="Enterprise branch network topology in Cisco Packet Tracer" loading="lazy" /></div>
+        <div class="panel-body">
+          <span class="label">Cisco Packet Tracer · Routing</span>
+          <h3>Enterprise Branch Network Architecture</h3>
+          <p lang="en">Two LAN topologies running OSPF and EIGRP with route redistribution, VLAN segmentation, router-on-a-stick and HSRP gateway redundancy.</p>
+          <p lang="es">Dos topologías LAN con OSPF y EIGRP, redistribución de rutas, segmentación con VLANs, router-on-a-stick y redundancia de gateway con HSRP.</p>
+          <div class="tags"><span class="tag">OSPFv2</span><span class="tag">EIGRP</span><span class="tag">HSRP</span><span class="tag">VLANs</span><span class="tag">DHCP Relay</span></div>
+          <span class="more"><span lang="en">Open case file</span><span lang="es">Ver proyecto</span> →</span>
+        </div>
+      </a>
+
+      <!-- ===============================================================
+           EDITAR: PLANTILLA PARA UN PROYECTO NUEVO
+           1. Duplica proyectos/_plantilla-proyecto.html y renómbralo (ej. wireshark-lab.html)
+           2. Crea la carpeta assets/projects/NOMBRE/ con tus imágenes
+           3. Quita los comentarios <!- - - -> de este bloque y llena los datos
+           4. Borra la tarjeta "PROJECT_02 · in progress" de abajo
+      <a class="panel project-card reveal" href="proyectos/NOMBRE-DEL-ARCHIVO.html">
+        <div class="panel-head"><span>PROJECT_02</span><span class="win-ctrl">— ▢ ✕</span></div>
+        <div class="thumb"><img src="assets/projects/NOMBRE/portada.jpg" alt="Descripción de la imagen" loading="lazy" /></div>
+        <div class="panel-body">
+          <span class="label">Herramienta · Área</span>
+          <h3>Título del proyecto</h3>
+          <p lang="en">Short description in English.</p>
+          <p lang="es">Descripción corta en español.</p>
+          <div class="tags"><span class="tag">Tag 1</span><span class="tag">Tag 2</span></div>
+          <span class="more"><span lang="en">Open case file</span><span lang="es">Ver proyecto</span> →</span>
+        </div>
+      </a>
+      =============================================================== -->
+
+      <!-- Tarjeta temporal: bórrala cuando agregues tu segundo proyecto -->
+      <div class="panel project-card pending reveal">
+        <div class="panel-head"><span>PROJECT_02</span><span class="win-ctrl">···</span></div>
+        <div class="thumb">LOADING<span class="cursor">_</span></div>
+        <div class="panel-body">
+          <span class="label"><span lang="en">In progress</span><span lang="es">En progreso</span></span>
+          <h3><span lang="en">Next case file</span><span lang="es">Próximo proyecto</span></h3>
+          <p lang="en">New security and networking labs are being documented. Check back soon.</p>
+          <p lang="es">Estoy documentando nuevos laboratorios de seguridad y redes. Vuelve pronto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 04 · EXPERIENCE + EDUCATION ============================ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-title"><span class="idx">04</span><h2><span lang="en">Experience</span><span lang="es">Experiencia</span></h2><span class="rule"></span></div>
+    <div class="two-col">
+      <div class="panel reveal">
+        <div class="panel-head"><span lang="en">work.log</span><span lang="es">trabajo.log</span><span class="win-ctrl">— ▢ ✕</span></div>
+        <div class="panel-body">
+          <!-- EDITAR: para agregar un trabajo nuevo, copia un <li>…</li> completo y ponlo ARRIBA (lo más reciente primero) -->
+          <ul class="timeline">
+            <li>
+              <span class="when">10/2024 — 04/2025</span>
+              <h3 lang="en">Collections & Customer Service Representative</h3>
+              <h3 lang="es">Agente de Cobros y Atención al Cliente</h3>
+              <div class="where">Bill Gosling Outsourcing</div>
+              <ul lang="en">
+                <li>Negotiated payment plans for 45–180 day delinquent accounts, consistently hitting $15,000 monthly recovery targets.</li>
+                <li>Analyzed payment pattern trends to identify high-risk accounts and prevent recurring default.</li>
+                <li>Handled ~80 daily calls under pressure, applying critical thinking to resolve issues efficiently.</li>
+              </ul>
+              <ul lang="es">
+                <li>Negocié planes de pago para cuentas con morosidad de 45 a 180 días, cumpliendo metas de recuperación de $15,000 al mes.</li>
+                <li>Analicé patrones de pago para identificar cuentas de alto riesgo y evitar morosidad recurrente.</li>
+                <li>Gestioné ~80 llamadas diarias bajo presión, aplicando pensamiento crítico para resolver incidencias.</li>
+              </ul>
+            </li>
+            <li>
+              <span class="when">08/2023 — 10/2023</span>
+              <h3 lang="en">Video Post-Production & Chroma Key Specialist (Internship)</h3>
+              <h3 lang="es">Editora de Video en Postproducción (Pasantía)</h3>
+              <div class="where">Amores de una Bruja — <span lang="en">Short film</span><span lang="es">Cortometraje</span></div>
+              <ul lang="en">
+                <li>Green screen keying, rotoscoping and background compositing for a short film screened at Cine Magaly during the Histeria Film Festival.</li>
+              </ul>
+              <ul lang="es">
+                <li>Limpieza de pantalla verde, recorte y composición de fondos para un corto exhibido en el Cine Magaly en el Histeria Film Festival.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel reveal">
+        <div class="panel-head"><span lang="en">education.log</span><span lang="es">educacion.log</span><span class="win-ctrl">— ▢ ✕</span></div>
+        <div class="panel-body">
+          <ul class="timeline">
+            <li>
+              <span class="when">2026</span>
+              <h3 lang="en">CCNA Network Technician</h3>
+              <h3 lang="es">Técnico en Redes CCNA</h3>
+              <div class="where">Universidad Castro Carazo</div>
+            </li>
+            <li>
+              <span class="when">2022 — 2024</span>
+              <h3 lang="en">Higher Technical Diploma in Digital Image & Audio Editing and Post-Production</h3>
+              <h3 lang="es">Técnico Superior en Edición y Postproducción Digital de Imagen y Sonido</h3>
+              <div class="where">Instituto Nacional de Aprendizaje (INA)</div>
+            </li>
+            <li>
+              <span class="when">2022 — 2024</span>
+              <h3 lang="en">Higher Technical Diploma in Audiovisual Post-Production</h3>
+              <h3 lang="es">Técnico Superior en Postproducción Audiovisual</h3>
+              <div class="where">Centro de Tecnología y Artes Visuales (CETAV)</div>
+            </li>
+            <li>
+              <span class="when">2020</span>
+              <h3 lang="en">High School Diploma & Accounting Junior Technician</h3>
+              <h3 lang="es">Bachillerato y Técnico Medio en Contabilidad General</h3>
+              <div class="where">C.T.P. San Juan Sur, Corralillo, Cartago</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 05 · CERTIFICATIONS ============================ -->
+<section id="certs">
+  <div class="wrap">
+    <div class="section-title"><span class="idx">05</span><h2><span lang="en">Certifications</span><span lang="es">Certificaciones</span></h2><span class="rule"></span></div>
+    <!--
+      EDITAR:
+       • Insignia: guarda la imagen en assets/certs/ y descomenta la línea <img …> de esa certificación.
+         (Si no hay imagen, se muestran las letras del cuadrito.)
+       • Link de verificación (Credly, Netacad…): descomenta el <a class="verify"> y pega tu URL.
+    -->
+    <div class="cert-grid">
+      <article class="panel cert featured reveal">
+        <div class="badge-slot">CCST<!-- <img src="assets/certs/ccst-cybersecurity.png" alt="CCST Cybersecurity badge" /> --></div>
+        <div>
+          <span class="year">2026 · <span lang="en">Certification</span><span lang="es">Certificación</span></span>
+          <h3>Cisco Certified Support Technician Cybersecurity (CCST Cybersecurity)</h3>
+          <div class="issuer">Cisco · Certiport · Junior Achievement Costa Rica · Mujer Digital</div>
+          <!-- <a class="verify" href="https://www.credly.com/badges/TU-ID" target="_blank" rel="noopener">Verify ↗</a> -->
+        </div>
+      </article>
+      <article class="panel cert reveal">
+        <div class="badge-slot">SRWE<!-- <img src="assets/certs/ccna2-srwe.png" alt="" /> --></div>
+        <div><span class="year">2026</span><h3>CCNA 2: Switching, Routing & Wireless Essentials</h3><div class="issuer">Cisco Netacad · Universidad Castro Carazo</div>
+        <!-- <a class="verify" href="URL" target="_blank" rel="noopener">Verify ↗</a> --></div>
+      </article>
+      <article class="panel cert reveal">
+        <div class="badge-slot">ITN<!-- <img src="assets/certs/ccna1-itn.png" alt="" /> --></div>
+        <div><span class="year">2026</span><h3>CCNA 1: Introduction to Networks</h3><div class="issuer">Cisco Netacad · Universidad Castro Carazo</div>
+        <!-- <a class="verify" href="URL" target="_blank" rel="noopener">Verify ↗</a> --></div>
+      </article>
+      <article class="panel cert reveal">
+        <div class="badge-slot">EPS<!-- <img src="assets/certs/endpoint-security.png" alt="" /> --></div>
+        <div><span class="year">2026</span><h3>Endpoint Security</h3><div class="issuer">Junior Achievement Costa Rica · Mujer Digital</div>
+        <!-- <a class="verify" href="URL" target="_blank" rel="noopener">Verify ↗</a> --></div>
+      </article>
+      <article class="panel cert reveal">
+        <div class="badge-slot">ICS<!-- <img src="assets/certs/intro-cybersecurity.png" alt="" /> --></div>
+        <div><span class="year">2026</span><h3 lang="en">Introduction to Cybersecurity</h3><h3 lang="es">Introducción a la Ciberseguridad</h3><div class="issuer">Junior Achievement Costa Rica · Mujer Digital</div>
+        <!-- <a class="verify" href="URL" target="_blank" rel="noopener">Verify ↗</a> --></div>
+      </article>
+      <article class="panel cert reveal">
+        <div class="badge-slot">AWS<!-- <img src="assets/certs/aws-essentials.png" alt="" /> --></div>
+        <div><span class="year">2025</span><h3>AWS Cloud Technical Essentials</h3><div class="issuer">Amazon Web Services · Coursera</div>
+        <!-- <a class="verify" href="URL" target="_blank" rel="noopener">Verify ↗</a> --></div>
+      </article>
+      <article class="panel cert reveal">
+        <div class="badge-slot">PY<!-- <img src="assets/certs/python-essentials.png" alt="" /> --></div>
+        <div><span class="year">2025</span><h3>Python Essentials 1</h3><div class="issuer">CETAV</div>
+        <!-- <a class="verify" href="URL" target="_blank" rel="noopener">Verify ↗</a> --></div>
+      </article>
+      <article class="panel cert reveal">
+        <div class="badge-slot">ITE<!-- <img src="assets/certs/it-essentials.png" alt="" /> --></div>
+        <div><span class="year">2025</span><h3>IT Essentials</h3><div class="issuer">UCR · Academia de Tecnología</div>
+        <!-- <a class="verify" href="URL" target="_blank" rel="noopener">Verify ↗</a> --></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 06 · CONTACT ============================ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-title"><span class="idx">06</span><h2><span lang="en">Contact</span><span lang="es">Contacto</span></h2><span class="rule"></span></div>
+    <div class="panel contact-panel reveal">
+      <div class="panel-head"><span>ping brithany</span><span class="win-ctrl">— ▢ ✕</span></div>
+      <div class="panel-body">
+        <div>
+          <h3><span lang="en">Let's connect.</span><span lang="es">Conectemos.</span></h3>
+          <p lang="en">Open to opportunities in network support, NOC/SOC and cybersecurity roles. Feel free to reach out.</p>
+          <p lang="es">Abierta a oportunidades en soporte de redes, NOC/SOC y ciberseguridad. Escríbeme con confianza.</p>
+          <div class="hero-cta" style="padding-left:0">
+            <a class="btn solid" href="mailto:serracinbrith@gmail.com"><span lang="en">Send email</span><span lang="es">Enviar correo</span> →</a>
+            <a class="btn" data-cv data-cv-base="assets/cv/" href="assets/cv/CV_Brithany_Serracin_EN.pdf" download>CV ↓</a>
+          </div>
+        </div>
+        <!-- EDITAR: tus enlaces de contacto -->
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:serracinbrith@gmail.com">serracinbrith@gmail.com</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/brithany-serrac%C3%ADn-networktechnician-cybersecurityanalyst" target="_blank" rel="noopener">/in/brithany-serracín ↗</a></li>
+          <!-- EDITAR: pon tu usuario de GitHub y descomenta -->
+          <!-- <li><span>GitHub</span><a href="https://github.com/TU-USUARIO" target="_blank" rel="noopener">github.com/TU-USUARIO ↗</a></li> -->
+          <!-- Teléfono: se dejó oculto a propósito (en una web pública atrae spam). Descoméntalo si lo quieres visible. -->
+          <!-- <li><span lang="en">Phone</span><span lang="es">Teléfono</span><a href="tel:+50663488545">+506 6348 8545</a></li> -->
+          <li><span lang="en">Location</span><span lang="es">Ubicación</span><span style="color:var(--text)">Costa Rica</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Brithany Serracín</span>
+    <span>SYS.STATUS: <span style="color:var(--ok)">ONLINE</span> // <span lang="en">all segments reachable</span><span lang="es">todos los segmentos alcanzables</span></span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
